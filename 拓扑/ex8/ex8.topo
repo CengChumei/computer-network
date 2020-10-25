@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.3.00">
+    <devices>
+        <dev id="4F4B531C-E0BD-4087-A983-498BDC95C379" name="LSW1" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-42-5F-F6" com_port="2001" bootmode="0" cx="173.000000" cy="173.000000" edit_left="200" edit_top="227">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="24" />
+            </slot>
+        </dev>
+        <dev id="5F49D1CC-E5D1-415f-98CD-D72569A84D7F" name="LSW2" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-95-58-92" com_port="2002" bootmode="0" cx="473.000000" cy="173.000000" edit_left="500" edit_top="227">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="24" />
+            </slot>
+        </dev>
+        <dev id="B06380EE-8CE3-4419-80AE-B601976FDE65" name="AR2" poe="0" model="AR1220" settings="" system_mac="00-E0-FC-AC-1B-E8" com_port="2003" bootmode="0" cx="318.000000" cy="73.000000" edit_left="342" edit_top="60">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Ethernet" interfacename="Ethernet" count="8" />
+            </slot>
+        </dev>
+        <dev id="8AD55627-9852-4c36-8A5C-2BEC251BE927" name="Server1" poe="0" model="Server" settings="-domain 0 -eth 54-89-98-A5-2F-D3 -ipaddr 192.168.1.1 -ipmask 255.255.255.0 -gateway 192.168.3.254 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist _www.baidu.com_192.168.1.1" system_mac="54-89-98-A5-2F-D3" com_port="0" bootmode="0" cx="473.000000" cy="373.000000" edit_left="500" edit_top="427">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="B72D97CA-D331-4837-B821-4A815B11BD5F" name="Client1" poe="0" model="Client" settings="-domain 0 -eth 54-89-98-D1-5E-02 -ipaddr 192.168.2.1 -ipmask 255.255.255.0 -gateway 192.168.4.254 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 192.168.1.1 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-D1-5E-02" com_port="0" bootmode="0" cx="173.000000" cy="373.000000" edit_left="200" edit_top="427">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="4F4B531C-E0BD-4087-A983-498BDC95C379" destDeviceID="B72D97CA-D331-4837-B821-4A815B11BD5F">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="1" srcBoundRect_X="200.000000" srcBoundRect_Y="243.183762" srcOffset_X="11.000000" srcOffset_Y="1.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="200.000000" tarBoundRect_Y="356.816223" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="5F49D1CC-E5D1-415f-98CD-D72569A84D7F" destDeviceID="8AD55627-9852-4c36-8A5C-2BEC251BE927">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="500.000000" srcBoundRect_Y="243.183762" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="500.000000" tarBoundRect_Y="356.816223" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="4F4B531C-E0BD-4087-A983-498BDC95C379" destDeviceID="B06380EE-8CE3-4419-80AE-B601976FDE65">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="235.549423" srcBoundRect_Y="175.483154" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="309.450562" tarBoundRect_Y="124.516846" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="B06380EE-8CE3-4419-80AE-B601976FDE65" destDeviceID="5F49D1CC-E5D1-415f-98CD-D72569A84D7F">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="381.287170" srcBoundRect_Y="123.411079" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="463.712830" tarBoundRect_Y="176.588913" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="385" top="77" right="487" bottom="94" content="192.168.3.254" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="195" top="82" right="297" bottom="99" content="192.168.4.254" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>
